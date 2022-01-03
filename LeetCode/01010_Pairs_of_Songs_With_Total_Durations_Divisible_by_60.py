@@ -41,4 +41,40 @@ class Solution:
                             same_pair += (counter[need_time] * (counter[need_time] - 1)) / 2
                             
         return int(not_same_pair/2 + same_pair)
-        
+
+
+# preprocess with modulo operation
+# Time Complexity O(n) 260ms
+# Space Complexity O(1) 18.4 MB
+# from collections import defaultdict
+# not mine
+# class Solution:
+#     def numPairsDivisibleBy60(self, time: List[int]) -> int:
+#         result, counter = 0, [0] * 60
+#         for i in time:
+#             counter[i % 60] += 1
+#         for i in range(1, 30):
+#             result += counter[i] * counter[60 - i]
+#         if counter[0] > 1:
+#             result += (counter[0] * (counter[0] - 1)) // 2
+#         if counter[30] > 1:
+#             result += (counter[30] * (counter[30] - 1)) //2
+#         return result
+
+
+# fill defaultdict
+# Time Complexity O(n) 226 ms
+# Space Complexity O(1) 17.7 MB
+# not mine
+# class Solution:
+#     def numPairsDivisibleBy60(self, time: List[int]) -> int:
+#         d = defaultdict(int)
+#         res = 0
+#         for song in time:
+#             if song % 60 == 0:
+#                 res += d[0]
+#             else:
+#                 res += d[60 - song%60]
+                
+#             d[song%60]+=1
+#         return res
