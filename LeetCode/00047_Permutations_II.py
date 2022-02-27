@@ -1,5 +1,5 @@
 # Time Complexity O(n!) 48 ms
-# Space Complexity O(n!) 14.5 MB
+# Space Complexity O(n) 14.5 MB
 class Solution:
     def permuteUnique(self, nums: List[int]) -> List[List[int]]:
         result = []
