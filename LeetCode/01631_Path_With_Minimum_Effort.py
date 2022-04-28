@@ -1,7 +1,7 @@
 import heapq
 
-# Time Complexity O(rc log rc)
-# Space Complexity O(rc)
+# Time Complexity O(rc log rc) 758 ms
+# Space Complexity O(rc) 16.5 MB
 class Solution:
     # dijkstra
     def minimumEffortPath(self, heights: List[List[int]]) -> int:
